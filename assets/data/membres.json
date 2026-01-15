@@ -1,0 +1,210 @@
+{
+  "Bureau": [
+    {
+      "id": 1,
+      "prenom": "Valentine",
+      "nom": "Girard",
+      "poste": "Présidente",
+      "photo": "valou.webp",
+      "description": "Malgré son petite mètre 20, notre chère présidente sait se faire entendre. Elle est toujours présente quand on a besoin d'elle, que ce soit pour recadrer les éléments dissipateurs d'une réunion ou sauver notre vp des conséquences du miroir face à un bareux avéré, et ce, toujours avec un grand sourire / le smile. Testée négative à la coke, elle est toujours à 200% et prête à mener nos projets les plus fous à terme !"
+    },
+    {
+      "id": 2,
+      "prenom": "Titouan",
+      "nom": "Leprêtre",
+      "poste": "Vice-président",
+      "photo": "titouan.webp",
+      "description": "Notre beau VP a de multiples talents. Gagner l'émission \"Vous connaissez les paroles\" ? c'est ok. DJ des mix incongrus ? c'est ok. Ouvrir une bière avec tout et n'importe quoi ? c'est ok. Danser comme si sa vie en dépendait ? c'est encore ok. Vous me direz que ces talents ne servent pas tant dans la vie de tous les jours, mais détrompez vous, Titou a plus d'un tour dans son sac ! Il est aussi quelqu'un d'extrêmement bosseur et gentil et c'est un plaisir de travailler tous les jours avec lui <3 Il sera parfait pour le rôle de VP, toujours à l'écoute et prêt à vous aider ! (ps: les filles, il est célib)"
+    },
+    {
+      "id": 3,
+      "prenom": "Anna",
+      "nom": "Marzouk",
+      "poste": "Vice-présidente",
+      "photo": "anna.webp",
+      "description": "Que serait TArmac sans notre superbe vp !? Sous ses airs de nonchalence, Anna cache une forte personnalité dotée d'une bienveillance bienvenue, ce qui fait d'elle le personnage parfait pour épauler Valou dans son travail. Basketteuse de renom, elle songe à une reconversion professionnelle en gossipeuse après avoir découvert un nouveau talent en arrivant à l'ensta 👀. Faire la fermeture des soirées et être présente en amphi à 9h n'est pas un problème pour elle, ainsi que valider ses partiels en ayant fini tous ses films préférés les soirs d'avant "
+    },
+    {
+      "id": 4,
+      "prenom": "Solène",
+      "nom": "Bersillon",
+      "poste": "Secrétaire générale",
+      "photo": "solene.webp",
+      "description": "Quand Solène a une idée en tête, rien ne l'arrête ! On aura beau lui dire qu'elle ne peut pas tout faire en même temps, notre Soso nationale est tellement organisée que toute tâche sera réalisée dans les plus brefs délais, et menée à la baguette (pov elle envoie des tableaux de perm à 4h du sbah). Notre belle parisienne est une personne dévouée et toujours prête pour n'importe quelle aventure ! Ne lui proposez pas d'aller courir, elle vous fumerait en deux temps trois mouvements. C'est notre icône et elle porte l'uniforme de la liste manifiquement <3"
+    },
+    {
+      "id": 5,
+      "prenom": "Alban",
+      "nom": "Pothin",
+      "poste": "Trésorier",
+      "photo": "alban.webp",
+      "description": "Il est musclé, il est drôle, il est grand (pas tant), c'est Alban le roi de l'argent 🤑. Accro aux remboursements, notre trez est déterminé pour n'avoir aucun listeux endetté, et il connait mieux que quiconque le fonctionnement de chaque banque et leurs offres de parainage. Pas de panique, ce n'est pas parce que le compte du BDE est à son nom qu'il va détourner des fonds (on le surveille de près)."
+    },
+    {
+      "id": 6,
+      "prenom": "Margot",
+      "nom": "Fabre",
+      "poste": "Vice-trésorière",
+      "photo": "margot.webp",
+      "description": "Vous la voyez de loin fumer sa petite cigarette devant le bat S mais en vrai \"c'est gavé ok\". Margot, notre belle bordelaise carry les gt. Elle est notre respo sans gluten et est une fervente militante anti-banane, elle a servi de modèle pour tester toutes nos magnifiques vestes,… Mais si vous demandez à n'importe qui ce que Margot fait dans la liste, c'est notre seule et unique responsable des gform, elle les cook comme une chef ! Elle est multi-tâche et a bien suivi tous les gt pour être sûre qu'on ne dépasse pas le budget. Oui on peut totalement faire confiance à Margot avec nos sous, même si elle a l'adresse mail d'une ado de 13 ans (lafacecacheedemargot@gmail.com allez spamer) "
+    },
+    {
+      "id": 7,
+      "prenom": "Pierre",
+      "nom": "Labrusse",
+      "poste": "Vice-trésorier",
+      "photo": "pierre.webp",
+      "description": "Peu importe ce qu'on lui demande de faire, Pierre est toujours partant pour n'importe quel projet. Ses compétences sont multiples et vont de travailler à la sono (il fait tout : install, desinstall, lumières, mapping et dj), de jongler à coder comme s'il voulait devenir le prez data (notre site va être magnifique grâce à lui). Finalement il n'a pas jeté son dévolu sur la présidence de DaTA mais bien sur PTpital, alias la meilleure asso de l'ensta. Son slogan \"Gloire aux PT\" résonne tous les jours pour flatter cette filière de toute beauté ! Marchant fièrement dans les pas de Juju, il fera un excellent vice-trésorier"
+    }
+  ],
+  "Événements": [
+    {
+      "id": 8,
+      "prenom": "Florian",
+      "nom": "Beraldi",
+      "poste": "Events",
+      "photo": "florian.webp",
+      "description": "Si vous n'avez jamais subi de tunnels en bas du bat S ou au milieu d'un cours d'espagnol, c'est que vous n'avez pas encore rencontré Florian ! Ce grand bavard adore partager ses aventures et surtout prendre de vos nouvelles, toujours dans la bonne humeur. S'il se cache sous son tour de cou et ses joggos skinny regular, ce n'est pas par peur des vents mais bien pour préparer dans la pus grande discrétion les prochains évènements de l'ensta 😍. Rien ne l'arrêtera maintenant qu'il a pour binôme notre cher Théo dans ses projets pour vous cook les meilleurs events de l'histoire de l'école, comme remplacer le café par un shot de ricard."
+    },
+    {
+      "id": 9,
+      "prenom": "Théo",
+      "nom": "Edouard",
+      "poste": "Events",
+      "photo": "theo.webp",
+      "description": "Même si c'est un gigantesque clown, il n'y aurait sûrement pas de liste TArmac s'il avait pas convaincu Valou de relister. Toujours en retard et balançant les idées les plus bêtes en réunion, il est néanmoins un excellent élément grâce à son expérience de shark ! Alors, dans cette nouvelle liste, il a décidé de troquer son costume pour un bidon de cocktail (même s'il avait déjà bien l'habitude de ceux-là), et il va vous régaler au maximum avec des events tout droit sortis de sous sa casquette. Il pourra aussi très bien épauler Benji lorsqu'il gérera les argentins afin d'organiser notre premier WEI fusionné ! Notre Théo il est un peu fifou mais, lui et ses cardigans, on les a adoptés <3"
+    },
+    {
+      "id": 10,
+      "prenom": "Benjamin",
+      "nom": "De La Fournière",
+      "poste": "Respo WEI",
+      "photo": "benji.webp",
+      "description": "Une casquette et des lunettes roses ? ça ne signifie qu'une chose : Benji is in the place 😎. Après sa douloureuse défaite de l'année dernière, il revient en force sous les couleurs de TArmac pour...construire un nouveau stand 🥳, pour son plus grand bonheur. Fort de son expérience de prez de Enstartiflette et de Enspike, ce grand sportif est plus fort que quiconque lorsqui'l s'agit de vous convaincre de goûter un fromage bizarre. Ce pouvoir de persuasion lui sera fort utile lorsqu'il s'agira de négocier l'organisation du prochain WEI, qui s'annonce grannndiose ..."
+    }
+  ],
+  "Alumni": [
+    {
+      "id": 11,
+      "prenom": "Enzo",
+      "nom": "Piednoir",
+      "poste": "Respo Alumni",
+      "photo": "enzo.webp",
+      "description": "Adore le poulet et le rugby, son rêve choper une babies espagnol comme il le dit (il tryhard duolingo et a reçu un livre d'espagnol à noël, il est deter), il a une mémoire de poisson rouge dès qu'il boit un verre d'alcool, mais les alumnis eux ils ne va pas les oublier"
+    }
+  ],
+  "Scolarité": [
+    {
+      "id": 12,
+      "prenom": "Lucie",
+      "nom": "Frémaux",
+      "poste": "Respo Scolarité 1A",
+      "photo": "lucie.webp",
+      "description": "Attention, les Bordelais nous envahissent !! 🫨 Fidèle disciple de Valou, notre respo scola sait se faire entendre et prend à coeur toutes les remarques qu'elle récolte, et saura donc porter vos voix auprès de l'administration afin de faire valoir vos droits et vos besoins. Munie d'un grand coeur et de grands talents artistiques …"
+    },
+    {
+      "id": 13,
+      "prenom": "Yann",
+      "nom": "Letournel",
+      "poste": "Respo Scolarité 2A",
+      "photo": "letournel.webp",
+      "description": "Vous pensiez que tenir 4 jobs en même temps était impossible ? C'est simplement parce que vous n'avez pas encore rencontré Yann. Virevoltant entre les séance couse-vélo-piscine, ce futur triathlète est également un chef cuistot dans l'âme, avec le coeur d'un trompetiste hors pair. Et surtout, la destinée d'un respo scola de renom. Un problème avec Federika ? Des notes toujours pas publiées malgré les 18 quizz que vous avez remplis ? Une envie de changer de plan de vie ? Appelez Yann au 06 52 67 52 02 et il se fera un plaisir de voir ce qu'il peut faire pour vous. Malgré un coup dur lors du choix du thème, il sait se faire entendre dans les réus et diriger ses apprentis cuisine à la cuiller, démontrant ainsi les talents de médiateur nécessaires pour les réus avec l'admin."
+    },
+    {
+      "id": 14,
+      "prenom": "Luiza",
+      "nom": "Gonçalves",
+      "poste": "Respo AST/ENIT",
+      "photo": "luiza.webp",
+      "description": "Si il y a bien une personne qui soit belle, solaire, gentille et une génie à la fois dans la liste, c'est Luiza ! 👑 Luiza slay en toute circonstance même avec son outfit du clip 🥸. De plus, votre brésilienne préférée (avec Vitor évidemment) a plus d'un tiktok dans son sac, ajoutez à cela sa créativité et son imagination débordante et vous obtenez la plupart des idées des campagnes TArmac. C'est cette capacité hors du commun à trouver d'excellentes idées et sa grande ouverture d'esprit qui lui ont permis de vous concocter un excellent programme AST/ENIT, qu'elle sera mener à bien d'une main de maître si elle est élue."
+    }
+  ],
+  "Associations": [
+    {
+      "id": 15,
+      "prenom": "Cassandra",
+      "nom": "Di Francesco",
+      "poste": "Respo Assos",
+      "photo": "cassandra.webp",
+      "description": "La presidente SisTA en personne!! A défaut de penser à regarder si il n'y a personne dans le couloir avant de sortir de réu (discretion prime), elle saura vous surprendre avec de nombreux talents cachés comme en jouant titanic à la flûte à bec (on reconnait presque l'air!) ou son don pour le ukulele!! Après vous avoir régalé avec TAducoeur au téléthon, Cassandra est prète à vous régaler en tant respo assos."
+    },
+    {
+      "id": 16,
+      "prenom": "Vitor",
+      "nom": "Ribeiro",
+      "poste": "Respo Assos",
+      "photo": "vitor.webp",
+      "description": "Avec son beau sourire et ..., comment Vitor ne pourrait-il pas gagner le concours du listeux le plus gentil ? Ravi de son arrivée sur notre cher plateau, il a à coeur de le faire vivre et de le rendre agréable pour tous, et c'est pourquoi la casquette de respo assos lui va si bien. Certainement un des éléments les plus stables de cette liste, il parvient toujours à nous sortir des idées de son chapeau, pour notre plus grand plaisir ... "
+    }
+  ],
+  "Communication": [
+    {
+      "id": 17,
+      "prenom": "Grégoire",
+      "nom": "Peix",
+      "poste": "Com Intérieure",
+      "photo": "gregoire.webp",
+      "description": "Plus présent à la kayacolloc que Théo, Grégoire est toujours au centre de l'action. Il ne ratera jamais une soirée, et vous non plus ! 🥳 Mais malgré son côté festif, il sait être sérieux et va vous cook des designs de folie, à l'image de son taper, pour annoncer les évenements du platal. "
+    },
+    {
+      "id": 18,
+      "prenom": "Côme",
+      "nom": "Darteil",
+      "poste": "Com Extérieure",
+      "photo": "comed.webp",
+      "description": "Le dompteur de chèvre, c’est comme ca qu’on l’appelle depuis qu’il nous a montré ses talents pour parler à l’oreille des animaux. Mais détrompez vous, sous sa casquette et ses airs décontractés se cache un véritable maitre des montages tik tok et des danses kawaï. A défaut d’avoir laissé une cheville à la nds trampo, il saura dynamiser le compte insta du bureau à coups de posts et de stories croustillantes"
+    },
+    {
+      "id": 19,
+      "prenom": "Annaëlle",
+      "nom": "Radenac",
+      "poste": "Relations Extérieures",
+      "photo": "annaelle.webp",
+      "description": "Elle est douce et gentille, sans Annaelle, TArmac n'aurait pas sa magnifique bâche ni son ravissant logo. Toujours pleine d'idées, elle veut tout essayer, mais ne vous fiez pas à son air discret : à la com, elle saura envoyer de redoutables mails autour du campus et remplir à merveille le role de relext "
+    }
+  ],
+  "Social": [
+    {
+      "id": 20,
+      "prenom": "Calliopée",
+      "nom": "De Seynes",
+      "poste": "Respo Inclusion",
+      "photo": "calliopee.webp",
+      "description": "Discrète mais il ne faut pas réveiller la bête. Calliopée est gentille, douce, avenante, mais elle sait se battre pour ses droits et ceux des autres. Même si elle est pas beaucoup plus grande que Valentine (qui n'est pas très grande), 10 ans de ju-jitsu brésilien, ça renforce, et elle est capable d'envoyer n'importe qui manger l'herbe dans les douves. Donc en cas de soucis, appelez Calliopée (et pas Cassiopée sinon c'est vous qui aurez des problèmes)"
+    },
+    {
+      "id": 21,
+      "prenom": "Kerian",
+      "nom": "Bidondo",
+      "poste": "Respo DD",
+      "photo": "kerian.webp",
+      "description": "Que serait TArmac sans notre respo DD ?? Ses qualités multiples nous ont ébahis tout au long de la préparation des campagnes, que ce soit pour empêcher Théo d'acheter 50 boîtes de lego parce que \"c'est pas DD\" ou pour se convertir en prof de danse pour permettre à tous d'apprendre à se déhancher comme un dieu. Sa gentillesse et son écoute font de lui un membre du pôle Inclusion exceptionnel, et il saura épauler Calliopée mieux que personne. La moindre note de musique libère son énergie atomique et fait de lui une vraie turbulence ..."
+    }
+  ],
+  "Entreprises": [
+    {
+      "id": 22,
+      "prenom": "Côme",
+      "nom": "Lenormand",
+      "poste": "Respo Entreprises 1A",
+      "photo": "comel.webp",
+      "description": "Bienvenue dans le tour op de Baby Boss : BEBE CÔME est sorti de son berceau et est prêt à vous cook les meilleurs pistonnages de l'histoire. Parrainé (ou plutôt bullied) par le légendaire Théo Edouard, il a appris des plus grands pour faire de l'ENSTA l'eldorado des after works. Solide sur les descentes, il saura garder les pieds sur terre en toute situation, même lorsqu'il s'agit de stocker 3m3 de planches de 2m46 de long dans sa chambre après une course poursuite digne de Mission Impossible dans le Bat S."
+    },
+    {
+      "id": 23,
+      "prenom": "Maximilien",
+      "nom": "Schirm",
+      "poste": "Respo Entreprises 1A",
+      "photo": "maximilien.webp",
+      "description": "\"Maximilien rentre-t-il dans une valise ?\", telle fut la question de Théo lorsque ce grand gaillard a débarqué à sa première réunion. Tout droit venu des îles , cette montagne de gentillesse sait montrer les crocs lorsqu'il s'agit d'arracher un partenariat ou une invitation pour nos entreprises préférées à l'ensta. Entouré de bébé Côme et Yann le ténébreux..."
+    },
+    {
+      "id": 24,
+      "prenom": "Yann",
+      "nom": "Mckeever",
+      "poste": "Respo Entreprises 2A",
+      "photo": "mckeever.webp",
+      "description": "Yann le farmer ténébreux, Yann le photographe, Yann le vigneron, et j'en passe, ce gentil bogoss a plus de skills dans son sac qu'un couteau-suiss n'a d'outils ! Mis à part ses difficultés à connaître sa droite et sa gauche, notre responsable Entreprises sait à peu près tout faire, et saura mettre en avant ses qualités pour charmer les plus grands pdg et vous offrir des opportunités de folie. Sa discrétion n'est pas un obstacle lorsqu'il s'agit de carry le côté artistique de la liste, via ses talents de filmeur / monteur / mappeur / dj / rappeur / danseur ?"
+    }
+  ]
+}

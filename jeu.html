@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#154360" />
+  <meta name="theme-color" content="#154360" />
+  <link rel="icon" type="image/png" href="assets/images/logo_ico.png" />
+  <title>Liste BDE TArmac</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/game.css">
+
+  <script src="https://kit.fontawesome.com/5a52e611a4.js" crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="game-header">
+        <h1>Jeu TArmac <span>Concours</span></h1>
+        <p>Évitez les oiseaux et battez le record de l'ENSTA !</p>
+        <p>Le meilleur joueur à la fin de la semaine sera récompensé par un lot.</p>
+    </section>
+
+
+    <div id="game-container">
+      <canvas id="game-canvas" width="360" height="640" aria-label="Jeu Avoid the Birds"></canvas>
+
+      <div id="menu" class="menu-overlay">
+        <img id="menu-title" src="assets/images/jeu/nom_logo.png" alt="Title" />
+
+        <div id="mini-leaderboard">
+            <div class="mini-rank-title">TOP JOUEURS</div>
+            <div id="top3-list">
+                <div class="loading-ranks">Chargement...</div>
+            </div>
+            <button id="show-full-leaderboard" class="btn-ranking-view">
+              <i class="fa-solid fa-trophy"></i> Voir le top 10
+            </button>
+        </div>
+
+        <div id="plane-select" class="plane-select">
+          <button class="plane-option selected" data-plane="biplan" title="Biplan">
+            <img src="assets/images/jeu/biplan.png" alt="biplan">
+          </button>
+          <button class="plane-option" data-plane="hydravion" title="Hydravion">
+            <img src="assets/images/jeu/hydravion.png" alt="hydravion">
+          </button>
+          <button class="plane-option" data-plane="chasse" title="Chasse">
+            <img src="assets/images/jeu/chasse.png" alt="chasse">
+          </button>
+          <button class="plane-option" data-plane="guerre" title="Guerre">
+            <img src="assets/images/jeu/guerre.png" alt="guerre">
+          </button>
+        </div>
+
+        <button id="play-btn" class="btn-play">JOUER</button>
+        <p class="hint">Cliquez n'importe où pour faire monter l'avion</p>
+      </div>
+
+      <div id="full-leaderboard-overlay" class="leaderboard-full" style="display: none;">
+        <div class="full-leaderboard-content">
+          <h2>CLASSEMENT GÉNÉRAL</h2>
+          <div id="full-rank-list"></div>
+          <button id="close-leaderboard" class="go-btn secondary">Retour</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <script type="module">
+    import { startGameEngine } from './assets/js/game.js';
+
+    const init = () => {
+        if (typeof startGameEngine === 'function') {
+            startGameEngine();
+        } else {
+            setTimeout(init, 100);
+        }
+    };
+
+    if (document.readyState === 'complete') {
+        init();
+    } else {
+        window.addEventListener('load', init);
+    }
+  </script>
+  
+</body>
+</html>
