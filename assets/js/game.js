@@ -314,30 +314,49 @@ const db = getDatabase(app);
   }
 
 
-  // --- FONCTION DE SAUVEGARDE (Version Firebase) ---
   async function saveScoreFirebase(name, pts, timeInMs) {
       const status = document.getElementById("score-status");
-      if (status) status.textContent = "Envoi...";
+      if (status) status.textContent = "Vérification...";
+
+      const nameRegex = /^[a-zA-Z0-9 ]+$/;
+      const cleanName = name.trim();
+
+      if (cleanName.length === 0) {
+        return;
+    }
+
+      if (pts > 2000) {
+          if (status) status.textContent = "Erreur";
+          return;
+      }
+
+      const seconds = timeInMs / 1000;
+      const pointsPerSecond = pts / seconds;
+
+      if (pts > 10 && pointsPerSecond > 15) {
+          if (status) status.textContent = "Erreur";
+          console.error("Erreur");
+          return;
+      }
 
       try {
           const scoreListRef = ref(db, 'leaderboard');
           const newScoreRef = push(scoreListRef);
           
           await set(newScoreRef, {
-              username: name,
+              username: cleanName,
               score: pts,
               duration_ms: Math.floor(timeInMs),
               timestamp: Date.now()
           });
 
           if (status) status.textContent = "Enregistré !";
-          
           updateLeaderboards();
           hideSaveSection();
 
       } catch (error) {
-          if (status) status.textContent = "Erreur de connexion";
-          console.error("Détail erreur Firebase:", error);
+          if (status) status.textContent = "Erreur";
+          console.error("Détail erreur:", error);
       }
   }
 
@@ -352,39 +371,39 @@ const db = getDatabase(app);
   }
 
   async function updateLeaderboards() {
-    const scoreRef = ref(db, 'leaderboard');
-    // On prend les 10 meilleurs scores
-    const q = query(scoreRef, orderByChild('score'), limitToLast(10));
-    
-    try {
-        const snapshot = await get(q);
-        let scores = [];
-        snapshot.forEach(child => { scores.push(child.val()); });
-        scores.reverse(); // Du plus grand au plus petit
+      const scoreRef = ref(db, 'leaderboard');
+      const q = query(scoreRef, orderByChild('score'), limitToLast(10));
+      
+      try {
+          const snapshot = await get(q);
+          let scores = [];
+          snapshot.forEach(child => { scores.push(child.val()); });
+          scores.reverse();
 
-        // Mise à jour du Mini Top 3
-        const top3List = document.getElementById("top3-list");
-        if (top3List) {
-            top3List.innerHTML = scores.slice(0, 3).map((s, i) => `
-                <div class="mini-rank-item">
-                    <span class="rank">#${i+1}</span>
-                    <span class="name">${s.username}</span>
-                    <span class="score">${Math.floor(s.score)}</span>
-                </div>
-            `).join('') || "Aucun score";
-        }
+          const top3List = document.getElementById("top3-list");
+          if (top3List) {
+              top3List.innerHTML = "";
+              scores.slice(0, 3).forEach((s, i) => {
+                  const item = document.createElement("div");
+                  item.className = "mini-rank-item";
+                  item.innerHTML = `<span class="rank">#${i+1}</span> <span class="name"></span> <span class="score">${Math.floor(s.score)}</span>`;
+                  item.querySelector(".name").textContent = s.username; 
+                  top3List.appendChild(item);
+              });
+          }
 
-        // Mise à jour du Top 10 Complet
-        const fullList = document.getElementById("full-rank-list");
-        if (fullList) {
-            fullList.innerHTML = scores.map((s, i) => `
-                <div class="full-rank-item">
-                    <span><b>${i+1}.</b> ${s.username}</span>
-                    <span>${Math.floor(s.score)} pts</span>
-                </div>
-            `).join('') || "Aucun score";
-        }
-    } catch (e) { console.error(e); }
+          const fullList = document.getElementById("full-rank-list");
+          if (fullList) {
+              fullList.innerHTML = "";
+              scores.forEach((s, i) => {
+                  const item = document.createElement("div");
+                  item.className = "full-rank-item";
+                  item.innerHTML = `<span><b>${i+1}.</b> <span class="full-name"></span></span> <span>${Math.floor(s.score)} pts</span>`;
+                  item.querySelector(".full-name").textContent = s.username;
+                  fullList.appendChild(item);
+              });
+          }
+      } catch (e) { console.error("Erreur affichage leaderboard:", e); }
   }
 
 
@@ -416,6 +435,16 @@ const db = getDatabase(app);
     `;
     
     container.appendChild(go);
+
+    const nameInput = document.getElementById("player-name");
+    
+    nameInput.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/[^a-zA-Z0-9 ]/g, "");
+        
+        if (e.target.value.length > 15) {
+            e.target.value = e.target.value.slice(0, 15);
+        }
+    });
 
     document.getElementById("player-name").addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
