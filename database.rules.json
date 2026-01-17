@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": true,
+    "leaderboard": {
+      ".indexOn": ["score"],
+      ".write": false
+    }
+  }
+}

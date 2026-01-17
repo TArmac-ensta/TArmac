@@ -1,14 +1,24 @@
 // --- IMPORTATION FIREBASE ---
+import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, push, set, get, query, orderByChild, limitToLast } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, get, query, orderByChild, limitToLast } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
 // --- CONFIGURATION FIREBASE---
 const firebaseConfig = {
-  databaseURL: "https://jeutarmac-default-rtdb.europe-west1.firebasedatabase.app/"
+  apiKey: "AIzaSyCRzQugmUHwxFhSaX4vumcS6O95scPl38E",
+  authDomain: "jeutarmac.firebaseapp.com",
+  databaseURL: "https://jeutarmac-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "jeutarmac",
+  storageBucket: "jeutarmac.firebasestorage.app",
+  messagingSenderId: "718402139386",
+  appId: "1:718402139386:web:d3a4007086e0a3265b8543",
+  measurementId: "G-J079K4NCN2"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+const functions = getFunctions(app, "us-central1");
+const submitScore = httpsCallable(functions, "submitScore");
 
   // ================= CONFIG =================
   const ASSETS_PATH = "assets/images/jeu/";
@@ -318,7 +328,6 @@ const db = getDatabase(app);
       const status = document.getElementById("score-status");
       if (status) status.textContent = "Vérification...";
 
-      const nameRegex = /^[a-zA-Z0-9 ]+$/;
       const cleanName = name.trim();
 
       if (cleanName.length === 0) {
@@ -340,14 +349,10 @@ const db = getDatabase(app);
       }
 
       try {
-          const scoreListRef = ref(db, 'leaderboard');
-          const newScoreRef = push(scoreListRef);
-          
-          await set(newScoreRef, {
-              username: cleanName,
-              score: pts,
-              duration_ms: Math.floor(timeInMs),
-              timestamp: Date.now()
+          await submitScore({
+            username: cleanName,
+            score: pts,
+            duration_ms: Math.floor(timeInMs),
           });
 
           if (status) status.textContent = "Enregistré !";
@@ -355,8 +360,8 @@ const db = getDatabase(app);
           hideSaveSection();
 
       } catch (error) {
-          if (status) status.textContent = "Erreur";
           console.error("Détail erreur:", error);
+          if (status) status.textContent = "Score refusé";
       }
   }
 
