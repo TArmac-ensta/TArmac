@@ -17,8 +17,10 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-const functions = getFunctions(app, "us-central1");
+const functions = getFunctions(app, "europe-west1");
 const submitScore = httpsCallable(functions, "submitScore");
+const startGameFn = httpsCallable(functions, "startGame");
+let currentGameId = null;
 
   // ================= CONFIG =================
   const ASSETS_PATH = "assets/images/jeu/";
@@ -321,6 +323,11 @@ const submitScore = httpsCallable(functions, "submitScore");
     if (scoreEl) { scoreEl.textContent = "0"; scoreEl.style.display = "none"; }
     isTransitioning = true; transitionTimer = 0; transitionX = BASE_W + 50; 
     countdownText = "3"; inMenu = false; running = false;
+
+    currentGameId = null;
+      startGameFn()
+        .then((res) => { currentGameId = res?.data?.gameId || null; })
+        .catch((err) => { console.error("startGame error:", err); currentGameId = null; });
   }
 
 
@@ -348,16 +355,21 @@ const submitScore = httpsCallable(functions, "submitScore");
           return;
       }
 
+      if (!currentGameId) {
+        if (status) status.textContent = "Erreur";
+        return;
+      }
+
       try {
           await submitScore({
             username: cleanName,
             score: pts,
-            duration_ms: Math.floor(timeInMs),
+            gameId: currentGameId,
           });
 
-          if (status) status.textContent = "Enregistré !";
-          updateLeaderboards();
-          hideSaveSection();
+      if (status) status.textContent = "Enregistré !";
+      updateLeaderboards();
+      hideSaveSection();
 
       } catch (error) {
           console.error("Détail erreur:", error);

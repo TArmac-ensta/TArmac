@@ -4,6 +4,10 @@
     "leaderboard": {
       ".indexOn": ["score"],
       ".write": false
+    },
+    "gameSessions": {
+      ".read": false,
+      ".write": false
     }
   }
 }
